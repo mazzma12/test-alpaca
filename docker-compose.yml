@@ -1,0 +1,9 @@
+services:
+  test-alpaca:
+    build: .
+    container_name: test-alpaca
+    volumes:
+      - .:/app
+    environment:
+      - TERM=xterm-256color
+    command: ["--alpaca", "happy", "--color", "green", "Hello from Docker! 🐳"]
